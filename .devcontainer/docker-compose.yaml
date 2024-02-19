@@ -1,0 +1,9 @@
+---
+services:
+  devcontainer:
+    build: .
+    environment:
+      - SSH_AUTH_SOCK=/ssh-agent
+    volumes:
+      - ..:/workspaces/project1
+      - ${SSH_AUTH_SOCK}:/ssh-agent
